@@ -1,6 +1,15 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-const a = 10;
-const name = "Hieu";
-const status = false;
-const stringArr = ["a", "b", "c", "d"];
+const products = [
+    { id: 1,
+        name: 'Product A'
+    },
+    { id: 2,
+        name: 'Product B'
+    },
+];
+function getProduct(products) {
+    const data = products.map(product => product.name);
+    return data.join('');
+}
+const data = getProduct(products);
+console.log(data);
